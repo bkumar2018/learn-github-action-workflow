@@ -1,3 +1,5 @@
+#The following workflow uses the github.event.workflow_run context and the GitHub REST API to download the artifact that was uploaded by the above workflow, unzips the downloaded artifact, and comments on the pull request whose number was uploaded as an artifact.
+
 name: Use the data
 
 on:
