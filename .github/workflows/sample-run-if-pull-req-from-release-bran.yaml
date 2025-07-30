@@ -1,0 +1,13 @@
+
+# This workflow will run whenever a pull request is opened, but the run_if job will only execute if the head of the pull request is a branch whose name starts with releases/
+on:
+  pull_request:
+    types:
+      - opened
+jobs:
+  run_if:
+    if: startsWith(github.head_ref, 'releases/')
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "The head of this PR starts with 'releases/'"
+

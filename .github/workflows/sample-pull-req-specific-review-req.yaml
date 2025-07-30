@@ -1,0 +1,11 @@
+
+# this workflow will run when a review is requested on a pull request, but the specific_review_requested job will only run when a review by octo-team is requested.
+on:
+  pull_request:
+    types: [review_requested]
+jobs:
+  specific_review_requested:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.requested_team.name == 'octo-team'}}
+    steps:
+      - run: echo 'A review from octo-team was requested'
