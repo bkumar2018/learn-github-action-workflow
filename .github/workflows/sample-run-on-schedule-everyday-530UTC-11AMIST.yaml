@@ -1,0 +1,11 @@
+#
+on:
+  schedule:
+    # * is a special character in YAML so you have to quote this string
+    - cron:  '30 5,17 * * *'
+jobs:
+  test_schedule:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Every time run 5:30 utc i.e 11 am ist
+        run: echo "This step will run at 5:30 utc i.e 11 am ist"

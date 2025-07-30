@@ -1,4 +1,5 @@
-#
+# The schedule event allows you to trigger a workflow at a scheduled time.
+# The shortest interval you can run scheduled workflows is once every 5 minutes.
 name: Run at schedule time
 on:
   schedule:
